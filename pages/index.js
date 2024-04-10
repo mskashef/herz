@@ -17,9 +17,6 @@ export default function Home() {
     <>
       <Head>
         <title>نماز حرز</title>
-        <meta name="description" content="نماز حرز" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main style={{background: '#a7944b', padding: 8, display: 'flex', flexDirection: 'column', gap: 8, minHeight: '100vh'}} dir="rtl">
         <Quran onNotEnd={() => setN(n => n - 1)} onEnd={() => setN(n => n + 1)} key={randomKey + ayatAlkorsi} text={ayatAlkorsi} title="آیة الکرسی"></Quran>

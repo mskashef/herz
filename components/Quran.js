@@ -34,7 +34,7 @@ export const Quran = (props) => {
       {open && (
         <>
           {text.split("\n").map((line) => {
-            return <div className="ayah">{line}</div>;
+            return <div className="ayah" key={line}>{line}</div>;
           })}
           <div className="toolbar">
             {c === 7 && (
