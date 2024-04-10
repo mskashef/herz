@@ -8,6 +8,11 @@ export default function Home() {
   const [randomKey, setRandomKey] = useState(0);
   const [n, setN] = useState(0);
 
+  const reset = () => {
+    setRandomKey(Math.random());
+    setN(0);
+  }
+
   return (
     <>
       <Head>
@@ -24,7 +29,7 @@ export default function Home() {
         <Quran onNotEnd={() => setN(n => n - 1)} onEnd={() => setN(n => n + 1)} key={randomKey + ekhlas} text={ekhlas} title="سورة الاخلاص"></Quran>
         {n === 5 && (
           <div style={{ textAlign: 'center' }}>
-            <IoMdRefreshCircle onClick={() => {setRandomKey(Math.random())}} size="100" color="#ece48c" style={{ cursor: 'pointer' }} />
+            <IoMdRefreshCircle onClick={reset} size="100" color="#ece48c" style={{ cursor: 'pointer' }} />
           </div>
         )}
         
